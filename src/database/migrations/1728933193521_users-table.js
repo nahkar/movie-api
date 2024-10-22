@@ -9,7 +9,7 @@ exports.shorthands = undefined;
  * @returns {Promise<void> | void}
  */
 exports.up = (pgm) => {
-  pgm.sql(`
+	pgm.sql(`
     CREATE TABLE users (
       user_id SERIAL PRIMARY KEY,
       email VARCHAR(255) NOT NULL UNIQUE,
@@ -24,7 +24,7 @@ exports.up = (pgm) => {
  * @returns {Promise<void> | void}
  */
 exports.down = (pgm) => {
-  pgm.sql(`
+	pgm.sql(`
     DROP TABLE users;
   `);
 };
